@@ -13,8 +13,8 @@ int main() {
 
     printf("Valor do produto é: R$ "); //entrada
     scanf("%f",&valor);
-    prest = (int)valor/3; /*div do valor para descobrir prest com operacao typecast */
-    entrada =valor-2*prest;
+    prest = (int)valor/3; /* divisão do valor para descobrir prest com operacao typecast */
+    entrada = valor-2*prest;
 
    printf("\n A entrada %.2f, a prestaçao será de 2x R$ %.2f parcelas\n",entrada, prest);
    

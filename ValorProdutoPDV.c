@@ -12,25 +12,24 @@ Lembre-se que: 32/10 🡪 3  (quociente da divisão inteira) e  32%10🡪 2( res
 
 int main(void) {
   
-  float precoBasico, desconto, precoTotal;
-  
-  int cod;
+  float precoBasico, desconto, precoTotal, xx, yy;
+  int codProduto;
 
   printf("Digite o codigo do produto com quatro digitos numericos (exemplo: 1234) \n");
 
-  scanf("%d",&cod);
+  scanf("%d",&codProduto);
 
-  precoBasico=(cod/100)*15+cod%100;
+  xx=codProduto/100;
+  yy=codProduto%100;
 
-  printf("Preco basico: %f.2\n",precoBasico);
+  precoBasico = (xx *15.00)+yy;
+  desconto = precoBasico*(yy/100);
+  precoTotal = precoBasico- desconto;
 
-  desconto=cod%100;
 
-  printf("Percentual de desconto: %.0f\n",desconto);
-
-  precoTotal=precoBasico*(1-(desconto/100));
-
-  printf("Preco total a pagar: %.2f\n", precoTotal);
+  printf("Preco basico: %.2f R$\n",precoBasico);
+  printf("Percentual de desconto: %.0f %%\n",desconto);
+  printf("Preco total a pagar:R$ %.2f\n", precoTotal);
 
   return 0;
 }
