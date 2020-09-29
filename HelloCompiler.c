@@ -13,6 +13,8 @@ int x = 42;
 int y;
 y = x - 1; /* c nao se importa com espacamentos desde que o parser seja capaz de separar os lexamos uns dos outros
 /*chamando uma funcao printf padrao com tres argumentos */
+
+/* - A funcao printf eh usada para exibir strings nos stdout. Esta tem algumas partes basicas, como o especificador de formatos (%here) */
 printf("Ola Mundo!!! y=%d x=%d\n", y, x);
 
 return 0;
