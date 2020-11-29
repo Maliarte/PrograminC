@@ -1,0 +1,345 @@
+/* 1. Devido ao afastamento social em decorrência da pandemia, a sessão de Cinema "Maliarte conta +1História" optou por oferecer conforto e segurança aos seus assinantes.
+Para isso disponibilizou o  dowload de filmes. 
+
+Por ser um Cinema pequeno, o acervo de obras conta com  10 obras, com as seguintes informações:
+
+Numero  do Filme:  110, 120, 130, 140, 150, 160, 170, 180, 190, 200
+Situação do Filme: (1.Esgotado para Download | 2. Disponível para Download)
+
+Faça um programa que obtenha as informações de cada obra (Numero  do Filme e Situação do Filme) e permita que sejam feitas várias consultas pelo teclado da seguinte forma: 
+o usuário digita o Numero  do Filme:
+* 110 - O cachorro Muito Louco 
+* 120 - Operação Storm
+* 130 - Aranha da Janela
+* 140 - Entre santos e desencantos 
+* 150 - As estrelas tambem morrem, todavia não fazem upload
+* 160 - Raspadinha 
+* 170 - Matrix 
+* 180 - Sempre tem um 
+* 190 - Pedra Lascada 
+* 200- Fome Castiga
+
+Obtem como resposta:
+
+Filme Não Disponível: caso o filme não seja encontrado.
+Filme Disponivel: caso seja encontrado e esteja disponivel.
+Filme Invalido. caso o item não tenha sido fornecido por este anteriormente.
+
+
+
+  2. [DESCOMENTAR P RUN] Faça um programa que leia o arquivo, a idade e a escolha feita por cada telespectador 
+  que ligou, exibindo, para cada filme, a idade do telespectador mais velho que votou 
+  no filme bem como o número do filme mais votado.
+
+  O termino da consulta é dado ao se digitar o numero da obra =0.
+
+  3. [DESCOMENTAR P RUN] Competição é Competição, porém Maliarte tem espirito esportivo e vontade de aprender com seus telespectadores. Por isso abriu UMa nova chamada, solicitando que os mesmos comparassem seus filmes com o do Concorrente esquina. No final o programa exibe o filme "alfa" campeão e o filme mais votado de seu concorrente. Considere os respectivos filmes e posição.
+
+
+  // Rainha(Maliarte)Film    110 - O cachorro Muito Louco,  120 - Operação Storm, 130 - Aranha da Janela, 140 - Entre santos e desencantos ,150 - As estrelas tambem morrem, todavia não fazem upload, 160 - Raspadinha ,  170 - Matrix , 180 - Sempre tem um , 190 - Pedra Lascada ,200- Fome Castiga
+
+	// Posição/repositorio/locação    
+  0,   1,   2,   3,   4,   5,   6,   7,   8,   9
+
+  Concorrente produções e seus respecrespectivos números:
+
+	48 - Piolhos e lendas \n67- Chocolatey \n33 - Na terra do Palmito\n12 - Autoestima e Perseverança \n8 - Diretivas em C\n29 - Freak \n15 - Robos e netinhos \n17 - Oxalá \n70- Curumin \n5 - Bença mãe\n
+
+	// Rei       48, 67, 33, 12, 8, 29, 15, 17, 70, 5
+	// Posição    0,  1,  2,  3, 4,  5,  6,  7,  8, 9
+
+ */
+
+
+ // PARTE I //
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define tam 30
+
+int preenche(int n, int vFilm[], int vMode[]);
+int busca(int n,int v[], int numero);
+ 
+int main(void) 
+{ 
+  int pos, desejo, vFilm[tam], vMode[tam], qt;
+
+  qt = preenche(tam, vFilm, vMode);
+
+  printf("\nÉ para Jah!\nForneça o número do filme desejado ou 0 Encerrar.\n");
+  scanf("%d",&desejo);
+  while (desejo!=0)
+{
+ //retorna pos ou -1 
+  pos = busca(qt, vFilm, desejo);
+  if (pos == 1) printf("\nNúmero de filme é Invalido.\nChecar novamente.");
+  else if (vMode[pos]==1) {
+  printf("Não foi dessa vez!\nFilme Indisponível.");
+  } else {
+    printf("\nPode preparar a Pipoca!\nFilme Disponível para Download.\n");
+  }
+  printf("\n\nForneça o número do filme desejado ou 0 Encerrar.\n");
+  scanf("%d",&desejo);
+}
+  return 0;
+}
+
+/////////////////////define qtd max/////////////////////////
+
+int preenche(int n, int vFilm[], int vMode[])
+{
+  int nFilm, i=0;
+
+  printf("\nDigite o número do Filme ou 0 Encerrar.\n");
+  printf("\n110 - O cachorro Muito Louco \n120 - Operação Storm\n130 - Aranha da Janela\n140 - Entre santos e desencantos \n150 - As estrelas tambem morrem, todavia não fazem upload\n160 - Raspadinha \n170 - Matrix \n180 - Sempre tem um \n190 - Pedra Lascada \n200 - Fome Castiga\n");
+  scanf("\n%d",&nFilm);
+
+  while (i<n && nFilm!=0)
+  {
+      vFilm[i] = nFilm;
+      printf("\n1.Esgotado para Download | 2. Disponível para Download \n");
+      printf("\nDigite a situação do filme de número %d\n", nFilm);
+      scanf("%d", &vMode[i]);
+      printf("\nDigite o número do Filme ou 0 Encerrar.\n");
+      printf("\n110 - O cachorro Muito Louco \n120 - Operação Storm\n130 - Aranha da Janela\n140 - Entre santos e desencantos \n150 - As estrelas tambem morrem, todavia não fazem upload\n160 - Raspadinha \n170 - Matrix \n180 - Sempre tem um \n190 - Pedra Lascada \n200 - Fome Castiga\n");
+      scanf("\n%d",&nFilm);
+    i++;
+  }
+return i;
+}
+
+/////////////////////Consulta Obras/////////////////////////
+
+int busca(int n,int v[], int numero)
+{
+int i;
+  for(i=0; i<n; i++)
+  {
+    if(v[i]==numero) return i;
+  }
+  return -1;
+}
+
+
+ // PARTE II  - DESCOMENTAR //
+
+ 
+
+/*#include <stdio.h>
+
+#define SIZE 100
+
+int validaIdade();
+void preencheArray(int v[], int valor);
+void mostraMaisIdoso(int vIdade[], int vFilme[]);
+void mostraMaisVotado(int v[]);
+void display();
+
+
+int main(void){
+    
+
+    int vFilme[SIZE];
+    int vIdade[SIZE];
+    int idade, filme, pos = 0;
+    
+    preencheArray(vFilme, -1);
+    preencheArray(vIdade, -1);
+    
+    idade = validaIdade();
+    
+    while(idade > 0){
+        vIdade[pos] = idade;
+        printf("Infome seu filme favorito:\n");
+        printf("\n110 - O cachorro Muito Louco \n120 - Operação Storm\n130 - Aranha da Janela\n140 - Entre santos e desencantos \n150 - As estrelas tambem morrem, todavia não fazem upload\n160 - Raspadinha \n170 - Matrix \n180 - Sempre tem um \n190 - Pedra Lascada \n200 - Fome Castiga\n");
+        scanf("%i", &filme);
+        if((filme >= 110 && filme <= 200) && (filme % 10 == 0)){
+            vFilme[pos] = filme;
+            pos++;
+        }else{
+            printf("\nVoto inválido!");
+        }
+        printf("\n");
+        idade = validaIdade();
+    }
+    
+  printf("\n");
+	printf("\n////////////////////////////////////////////////////////");
+	printf("\n////////////////// DADOS ESTATÍSTICOS //////////////////");
+	printf("\n////////////////////////////////////////////////////////\n\n");
+    mostraMaisIdoso(vIdade, vFilme);
+    mostraMaisVotado(vFilme);
+        
+    return 0;
+}
+
+//////////////////////////////////////////////////////////
+void preencheArray(int v[], int valor){
+
+    for(int i = 0; i < SIZE; i++){
+        v[i] = valor;
+    }
+}
+//////////////////////////////////////////////////////////
+int validaIdade(){
+	int idade;
+	printf("!!!Bem Vindos CyberLovers!!!\n");
+	printf("\nInfome sua idade ou 0 para sair: ");
+    scanf("%i", &idade);
+    while(idade < 0 || idade > 110){
+		printf("ERRO!\n");
+		printf("Infome novamente sua idade ou 0 para sair: ");
+		scanf("%i", &idade);
+	}
+	return idade;
+}
+
+//////////////////////////////////////////////////////////
+void mostraMaisIdoso(int vIdade[], int vFilme[]){
+    int maxIdade = -1;
+    int pos;
+    
+    for(int i = 0; i < SIZE; i++){
+        if(vIdade[i] > maxIdade){
+            maxIdade = vIdade[i];
+            pos = i;
+        }
+    }
+    printf("Participante mais idoso ... %i anos\n", maxIdade);
+    printf("Filme escolhido por ele ... %i\n", vFilme[pos]);
+}
+
+//////////////////////////////////////////////////////////
+void mostraMaisVotado(int v[]){
+	int cod;
+	int cont = 0;
+	int maxCont = -1;
+	int maxFilme;
+	
+	for(cod = 110; cod <= 200; cod= cod + 10){
+		for(int i = 0; i < SIZE; i++){
+			if(v[i] == cod){
+				cont++;
+			}
+			if(cont > maxCont){
+				maxCont = cont;
+				maxFilme = cod;
+			}
+		}
+		cont = 0;
+	}
+	
+	printf("O filme mais votado foi o código %d. %i votos\n\n", maxFilme, maxCont);
+}
+ */
+
+ /*
+ 
+ // PARTE III  - DESCOMENTAR  //
+
+ #include <stdio.h>
+ #include<stdlib.h>
+
+ #define TAM 10
+
+void preencheArray(int v[], int size);
+void vota(int v[], int vPontos[], int ref); // (ref=1 -> rei) (ref=2 -> rainha)
+int mostraVencedor(int v[], int size);
+int avaliaVetor(int v[],int size, int valor);
+
+
+int main(void){
+	// Rainha(Maliarte)Film    110 - O cachorro Muito Louco,  120 - Operação Storm, 130 - Aranha da Janela, 140 - Entre santos e desencantos ,150 - As estrelas tambem morrem, todavia não fazem upload, 160 - Raspadinha ,  170 - Matrix , 180 - Sempre tem um , 190 - Pedra Lascada ,200- Fome Castiga
+
+	// Posição/repositorio/locação    0,   1,   2,   3,   4,   5,   6,   7,   8,   9
+
+  
+	
+	// Rei       48, 67, 33, 12, 8, 29, 15, 17, 70, 5
+	// Posição    0,  1,  2,  3, 4,  5,  6,  7,  8, 9
+	
+	int vRainha[TAM], telespec, pos, cont = 0;
+	int vRei[TAM] = {48, 67, 33, 12, 8, 29, 15, 17, 70, 5 };
+	int vPontosRei[TAM];
+	
+	preencheArray(vRainha, TAM);
+	preencheArray(vPontosRei, TAM);
+	
+	printf("Informe a quantidade de Telespectadores Consultados: ");
+	scanf("\n%i", &telespec);
+	
+	while(cont < telespec){
+		vota(vRainha,0, 2);
+		vota(vRei, vPontosRei, 1);
+		cont++;
+	}
+	
+	pos = mostraVencedor(vRainha, TAM);
+	printf("O filme ALFA do Oscar Tabajara foi o de número %i com %i votos.\n", pos + 101, vRainha[pos]);
+	pos = mostraVencedor(vPontosRei, TAM);
+	printf("O beta foi o filme concorrente de  número %i com %i votos válidos.\n\n", vRei[pos], vPontosRei[pos]);
+	
+	return 0;
+}
+
+void preencheArray(int v[], int size){
+	int i = 0;
+	for(; i < size; i++){
+		v[i] = 0;
+	}
+}
+
+void vota(int v[], int vPontos[], int ref){ //(ref=1 -> rei) (ref=2 -> rainha)
+	int voto, posicao;
+	
+	if(ref == 1){
+		printf("Informe o número do Filme concorrente\n48 - Piolhos e lendas \n67- Chocolatey \n33 - Na terra do Palmito\n12 - Autoestima e Perseverança \n8 - Diretivas em C\n29 - Freak \n15 - Robos e netinhos \n17 - Oxalá \n70- Curumin \n5 - Bença mãe\n");
+		scanf("\n%i", &voto);
+		posicao = avaliaVetor(v, TAM, voto);
+		if(posicao == -1){
+			printf("\nVoto nulo.\n\n");
+		}else{
+			vPontos[posicao]++;
+		}
+	}else{
+		printf("\nInforme o número do Filme Maliarte que tu mais curte:\n110 - O cachorro Muito Louco \n120 - Operação Storm\n130 - Aranha da Janela\n140 - Entre santos e desencantos \n150 - As estrelas tambem morrem, todavia não fazem upload\n160 - Raspadinha \n170 - Matrix \n180 - Sempre tem um \n190 - Pedra Lascada \n200 - Fome Castiga\n ");
+		scanf("%i", &voto);
+		if(voto < 101 || voto > 110){
+			printf("Voto nulo.\n");
+		}else{
+			posicao = voto - 101;
+			v[posicao]++;
+		}
+	}
+}
+
+int mostraVencedor(int v[], int size){
+	int max = -1;
+	int maxPos;
+	int i;
+	
+	for(i = 0;i < size; i++){
+		if(v[i] > max){
+			max = v[i];
+			maxPos = i;
+		}
+	}
+	
+	return maxPos;
+}
+
+int avaliaVetor(int v[],int size, int valor){
+	
+	for(int i = 0; i < TAM; i++){
+		
+		if(v[i] == valor){
+			
+			return i;
+		}
+	}
+	return -1;
+}
+
+ 
+  */
