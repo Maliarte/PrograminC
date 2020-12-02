@@ -1,0 +1,82 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+/*
+//Exemplo de passagem "por valor" Oq acontece dentro funçao que recebe parametro um valor, fora dela nada muda; 
+
+void soma_mais_um(int n) //atribuição invisible n = x
+{
+n = n + 1;//6
+printf("Dentro da função: x = %d\n", n);
+
+}
+
+int main(void)
+{
+int x = 5;
+printf("Antes da função: x = %d\n", x);
+soma_mais_um(x); //destruida função 
+//tipo void não precisa declarar na call
+printf("Dps da função: x = %d\n", x); //volta x = 5
+return 0;
+
+}
+*/
+///////////////////////////////////////////////////////////////////////////////////////////
+
+ /*
+//Passagem por Referência parâmetro recebe op. de indireção. //Função  chama com  Op. endereçamento.
+//Parametro por referência: usa-se o operador "*"
+//na frente do nome do parâmetro durante a declaração da função
+
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+void soma_mais_um(int *n) //n = &x
+{
+*n = *n + 1;
+}
+
+int main(void)
+{  
+int x = 5;
+printf("Antes da função: x = %d\n", x);
+soma_mais_um(&x); 
+// chamada de f. por ref. passagem de parametro igual a //função scanf.
+
+printf("Dps da função: x = %d\n", x);
+return 0;
+
+}
+
+
+ */
+
+void somaValor(int n) 
+{
+  n = n + 1;
+}
+void soma_referencia(int *n) 
+//a função deve conter o tipo da variavel
+{
+*n = *n + 1;
+
+}
+int main ()
+{
+  int x = 5;
+  somaValor(x); //callwith value
+  printf("\n||Passagem por Valor||\n");
+  printf("\nValor informado: x = %d", x);
+  printf("\nValor depois da função: x = %d", x);
+
+  int y = 5;
+  soma_referencia(&y);
+  printf("\n\n||Passagem por referência||\n");
+   printf("\nValor informado: y = %d", x);
+  printf("\nDepois da função: y = %d", x);
+
+  return 0;
+
+}
