@@ -1,0 +1,57 @@
+/* 
+Rio de Janeiro, 02 Dezembro de 1010 
+
+* Aprenda mais com Marília Silva. 
+* Master from³ https://maliarte.com.br
+
+#barbarostecnologicos #malimidia #maliarte
+
+🤔  is always a better thing.
+
+
+* PASSAGEM DE PARAMETRO POR VETOR
+
+A Passagem  de parâmetro por vetor ocorre pelo método da *referência, pois pela cópia do valor iria afetar o desempenho do programa. A desvatagem
+é que por referência o acesso é feito diretamente na memória, há necessidade de atenção.
+*/
+
+
+//Sintaxe: Perceba o segundo parâmetro foi passado por cópia, porém este indica o tamanho do vetor.
+
+//void imprime(int *m, int n); (Inicio, Posições Pertecentes Ao Vetor.)
+//void imprime(int m[], int n);
+//void imprime(int m[5], int n);
+
+//A ultima, por sua vez significa mais para você do que para o compila, uma vez que passado o vetor você passa SOMENTE
+//a primeira posição do vetor, onde ele começa na memória. Ex:
+//m[5] =  | 0 |  \\ int n = posições consideradas
+//        | 1 |   \\ 
+//        | 2 |
+ //       | 3 |
+//        | 4 |
+//        | 5 |
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void imprime(int *n, int m)
+{ 
+int i;
+  for (i=0; i<m; i++) //m(5)
+{
+printf("%d n", n[i]);
+}
+}
+
+int main (void) 
+{
+// declara vetor
+int v[5]={1,2,3,4,5};
+imprime(v,5); 
+//Perceba: na chamada da função apenas o nome do array(100 OP [],[i],[*]) 
+//*Nu e cru como ele veio ao mundo.
+
+return 0;
+}
