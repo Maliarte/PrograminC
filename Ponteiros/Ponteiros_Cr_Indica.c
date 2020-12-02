@@ -104,3 +104,149 @@ int main (void){
 
 	return 0;
 }
+
+
+
+// uma luz azul me guia, com o brilho e os lampejos do farol...
+
+/* 
+#include <stdio.h>
+
+int validaMatricula();
+void quebraMatricula(int matricula,int *area,int *curso,int *numero);
+void entraDadosAluno(float *cr, int *nDisciplina);
+void fazRecomendacao(int area,float cr,int *rMin,int *rMax);
+float umAluno(int matricula, int nDisciplina, float cr);
+
+
+
+int main (void){
+	int matricula, nDisciplina, contadorBolsa=0, contadorGeral, maiorBolsaAluno;
+	float cr, bolsa, acumuladorBolsa, maiorBolsa=-1;
+	
+	contadorBolsa = contadorGeral = 0;
+	matricula = validaMatricula();
+	
+	while(matricula){
+		entraDadosAluno(&cr, &nDisciplina);		
+		bolsa = umAluno(matricula, nDisciplina, cr);
+		printf("A bolsa terá um desconto de %.2f %%\n\n", bolsa);
+		if(bolsa){
+			contadorBolsa++;
+			acumuladorBolsa+=bolsa;
+			if(bolsa > maiorBolsa){
+				maiorBolsa = bolsa;
+				maiorBolsaAluno = matricula;
+			}
+		}
+		matricula = validaMatricula();
+		contadorGeral++;
+	}
+	printf("\n****************TOTALIZAÇÕES************************\n");
+	printf("%i alunos participaram da avaliação\n", contadorGeral);
+	printf("A maior bolsa foi de %.2f %% da matrícula %i\n", maiorBolsa, maiorBolsaAluno);
+	printf("%i alunos foram aprovados com bolsa\n", contadorBolsa);
+	printf("O percentual médio das bolsas é de %.2f %%\n", acumuladorBolsa / contadorBolsa);
+	printf("****************************************************\n\n");
+	
+	return 0;
+}
+
+/////////////////////////////////////////////////////////////
+//////////////////FUNÇÕES AUXILIARES/////////////////////////
+/////////////////////////////////////////////////////////////
+
+int validaMatricula(){
+	int matricula, area, curso, numero;
+	printf("Informe a matrícula ou zero para sair: ");
+	scanf("%i", &matricula);
+	
+	if(matricula == 0){
+	}else{
+		quebraMatricula(matricula, &area, &curso, &numero);
+		while((matricula > 29999) ||(area != 1 && area != 2) || 
+		(curso < 1 || curso > 9) || (numero < 1 || numero > 999)){
+			printf("\n********************************************************\n");
+			printf("Foram colocados valores inválidos.\n");
+			printf("A matrícula tem a seguinte formação: NDXXX\n");
+			printf("N: representa  a área:\n");
+			printf("1 - Técnico Científico\n");
+			printf("2 - Humanas\n");
+			printf("D:  número entre 1 e 9,  representando o curso na área\n");
+			printf("XXX : número sequencial entre 1 e 999\n");
+			printf("********************************************************\n\n");
+			
+			printf("Informe a matrícula ou zero para sair: ");
+			scanf("%i", &matricula);
+			quebraMatricula(matricula, &area, &curso, &numero);
+		}
+	}
+	
+	return matricula;
+}
+/////////////////////////////////////////////////////////////
+void quebraMatricula(int matricula,int *area,int *curso,int *numero){
+	
+	(*numero) = matricula % 1000;
+	matricula = matricula / 1000;
+	(*curso) = matricula % 10;
+	(*area) = matricula / 10;
+	return;
+}
+/////////////////////////////////////////////////////////////
+void entraDadosAluno(float *cr, int *nDisciplina){
+	
+	printf("Informe o CR: ");
+	scanf("%f", &*cr);
+	printf("Informe o número de disciplinas cursadas: ");
+	scanf("%i", &*nDisciplina);
+	
+	return;
+}
+/////////////////////////////////////////////////////////////
+void fazRecomendacao(int area,float cr,int *rMin,int *rMax){
+	
+	if(cr >= 9.0){
+		(*rMin) = 30;
+		if(area == 1){
+			(*rMax) = 40;
+		}else{
+			(*rMax) = 35;
+		}
+		
+	}else{
+		if(cr >= 8.0){
+			(*rMin) = 10;
+			if(area == 1){
+				(*rMax) = 15;
+			}else{
+				(*rMax) = 12;
+			}
+		}else{
+			if(cr >= 7.0){
+				(*rMin) = (*rMax) = 5;
+			}else{
+				(*rMin) = (*rMax) = 0;
+			}
+		}	
+	}
+	return;
+}
+/////////////////////////////////////////////////////////////
+float umAluno(int matricula, int nDisciplina, float cr){
+	int area, curso, numero,rMin, rMax;
+	float bolsa;
+	
+	quebraMatricula(matricula, &area, &curso, &numero);
+	fazRecomendacao(area, cr, &rMin, &rMax);
+	bolsa = rMin + (0.05 * nDisciplina);
+	
+	if(bolsa > rMax){
+		bolsa = rMax;
+	}
+		
+	return bolsa;
+}
+
+
+*)
