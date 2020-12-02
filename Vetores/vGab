@@ -1,0 +1,40 @@
+//Informe se é aluna exemplar
+//Acima de 9 acertos é exemplar
+
+
+#include <stdio.h>
+
+#define TAM 5
+
+int main(void){
+	
+	int vGab[TAM];
+	int vAluna[TAM];
+	int i, acerto, nota; 
+	
+	acerto = 0;
+	
+	for(i = 0; i < TAM; i++){
+		printf("\n|GABARITO| %dª QUESTÃO: ", i+ 1);
+		scanf("%i", &vGab[i]);
+	}
+	
+	for(i = 0; i < TAM; i++){
+		printf("\n|RESPOSTA| %dª Q: ", i+ 1);
+		scanf("%i", &vAluna[i]);
+	}
+	
+	for(i = 0; i < TAM; i++){
+		if(vAluna[i] == vGab[i]){
+			acerto++;
+		}
+	}
+	
+	nota = acerto * 2;
+	
+	printf("\n\nSOLUÇÃO: NOTA %d\n", nota);
+	
+	
+	
+	return 0;
+}
