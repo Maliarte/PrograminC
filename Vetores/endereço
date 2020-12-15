@@ -1,0 +1,35 @@
+#include <stdio.h>
+/* Todo vetor é um ponteiro constante, cujo valor não pode ser alterado e o rótulo armazena o endereço do 1º elemento do vetor */
+
+int main(void){
+  int i;
+  int v[4]= {17,42,23,34};
+
+  /// exibindo o 1º valor ///
+    printf("%d\n", *v); 
+  /// exibindo o 2º valor ///
+  printf("%d\n", *v+1); 
+  /// exibindo o 3º valor ///
+  printf("%d\n\n\n", *v+2); 
+
+  //logo, pode-se incrementar em i num laço for
+  for (i=0; i<4; i++) {
+    // endereço ocupado em cada célula do vetor
+    printf("Endereço: %i\nPosição %i\n", (v+i), i);
+
+    // Valor ocupado em cada célula do vetor
+    printf("Valor: %i\n\n", *(v+i));
+  }
+
+///////////////////////// Alterando valores/////////////
+/// por analogia *(v+2)=99; Vai até a posição 2 e altera
+printf("Valor posição 2 do vetor: %d\n",*(v+2)); 
+
+*(v+2)= 99;
+
+printf("Depois de alterar o valor: %d\n\n",*(v+2)); 
+////////////////armazenando valores na i_ésima pos////
+*(v+i)=100;
+printf("I_ésima pos: %d\n",*(v+i));
+  return 0;
+}
