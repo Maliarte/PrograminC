@@ -1,0 +1,42 @@
+/* 
+Escreva um programa que receba do user 20 valores  inteiros e apresente o maior, o menor e suas respectivas posições. Caso existam numeros iguais mostre a posição da primeira ocorrência.
+
+
+*/
+#include <stdio.h>
+#define TAM 3
+
+int main(void) {
+  int vet[TAM];
+  int i; //controlador  for
+  int maior;
+
+                                      //preenche vetor
+  for(i=0; i<TAM; i++){
+  printf("Informe valor inteiro:\n");
+  scanf("%d", &vet[i]); // armazena no vetor na posição controlada pelo i
+  }
+
+                                      //encontrar o maior valor do vetor
+
+maior = vet[0]; //inicializa variavel maior com 1ºvalor do vetor
+
+//logo o laço for começa da proxima posição do vetor
+
+
+      for ( i=1; i<TAM; i++) {
+            if (vet[i]> maior) {
+            maior = vet[i]; //substitui
+            }
+      }
+
+                                      //exibe
+
+printf("Vetor: ");
+      for(i=0; i<TAM; i++){
+      printf("%i; ", vet[i]);
+      }
+printf("\n||Maior valor: %d||", maior);
+
+return 0;
+}
