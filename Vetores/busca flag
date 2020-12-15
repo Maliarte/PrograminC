@@ -1,0 +1,48 @@
+/* Programa que lê valores e armazene-os em em uma lista/vetor
+* entrada de dados iniciada com 0
+* será solicitado ao usuário valor de busca 
+* caso seja encontrado mostrar em qual posição
+* caso contrário mostrar "valor não encontrado"
+| ENTRADA : 1 2 3 4 5                 | SAÍDA: O NÚMERO 2 ESTÁ NA POSIÇÃO 1
+| BUSCA: 2                             
+*/
+
+#include <stdio.h>
+#define MAX 20  
+
+int main(void) {
+  int vetor[MAX]; // define vetor com  constante de tamanho 20 posições.
+  int i;          //controla repetição
+  int valor,busca;      //variavel de entrada
+  int tam = 0;     //quantas posições do vetor preenchidas, precisamos definir   o tamanho inicial para saber quantas posições estão ocupadas.
+    
+  int posEncontrada=-1; //variavel aux. para informar se for encontrado valor [flag]
+    printf("Informe o valor:\n");    scanf("%d", &valor);
+  
+  //rotina de entrada de dados.
+
+  while(valor != 0)
+  {
+    vetor[tam]=valor; 
+    //com um valor inicial dentro do vetor o tam não é mais 0 é 1, logo:
+    tam++;
+    printf("Informe o próximo valor:\n"); scanf("%d", &valor);
+  }//fim da entrada de dados
+
+
+  printf("Informe valor desejado para busca:\n"); scanf("%d", &busca); //pedir valor de busca//
+
+  //laço de busca//
+  for (i=0; i<tam; i++)
+  {
+      if (busca == vetor[i]) {
+      printf("|| Valor %d || está na posição %d||", busca, i);
+      posEncontrada = i;
+      }
+  }
+      if(posEncontrada==-1){
+        printf("Valor %d não  foi Encontrado.", busca);
+      }
+
+  return 0;
+}
