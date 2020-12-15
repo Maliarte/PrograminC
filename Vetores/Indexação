@@ -1,0 +1,17 @@
+#include <stdio.h>
+//Significado de Indexação. substantivo feminino Ação de indexar, de listar ou de organizar em índice
+//cada célula do vetor é identificada por um NÚMERO.
+
+int main(void) {
+  int i;
+  int v[4]={17,42,23,34};
+  for(i=0;i<4;i++){
+  printf("\nPosição: %i Valores do vetor: %d\n\n", i, v[i]);
+  }
+  v[2]=99;
+printf("\nPosição v[2] 3ª vetor pós atribuição: %i",v[2]);
+//armazenando valor na i_ésima posição
+
+ //int v[i]=3;
+  return 0;
+}
