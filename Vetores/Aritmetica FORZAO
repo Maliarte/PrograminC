@@ -1,0 +1,29 @@
+/*Entrada de valores, se for par multiplica por três. Se for impar soma 1. Exibir resultados. */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+int v[10];
+
+// entrada de dados 
+for(int i=0; i<10; i++) {
+  printf("Entre com valor: ");
+  scanf("%d", &v[i]);
+
+}
+// Aritmética 
+for(int i=0; i<10; i++) {
+  if(v[i] % 2 == 0){
+    v[i] = v[i] * 3;
+  } else {
+    v[i]=v[i]+1;
+  }
+}
+// saida de dados 
+for(int i=0; i<10; i++) {
+  printf("\nValor: %d\n", v[i]);
+ }
+  return 0;
+}
