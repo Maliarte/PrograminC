@@ -14,11 +14,10 @@ Observação: se a diferença entre o equilíbrio térmico e a temperatura do co
 
 Faça um programa que leia a temperatura da água de cada copo, calcule o equilíbrio térmico (média aritmética das 3 temperaturas) e exiba, para cada copo, uma das 3 mensagens acima.
 
-
 */
+
 #include <stdio.h>
 #include <locale.h>
-
 #define COPOS 3;
 
 void moldura()
@@ -83,5 +82,4 @@ int main(void)
     moldura();
 
     return 0;
-} */
-/////////////////////Fim Questão 1 ////////////////////////
+} 
