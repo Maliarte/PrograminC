@@ -84,3 +84,8 @@ Controle de Fluxo
 De acordo com os principios de Von Neumann, a .exe do programa eh sequencial. Cada instrucao eh .executada uma apos outra. Porem ha varias instrucoes para alterar o controle do fluxo.
 
 Ifzao, do corason (Ver_LanguageC_TDD_if_example.c)
+ 
+ 
+ Referencias
+ 
+ http://files.dtsilva.webnode.pt/200000087-adb28aeac7/Sebenta_C.pdf
