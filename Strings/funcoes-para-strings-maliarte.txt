@@ -1,0 +1,61 @@
+1) strlen: string length  -> manipula apenas 1 string(parametro)
+-> Dada uma string, retorna a sua quantidade de caracteres (desconsidera o \0)
+
+exemplo:
+	x = strlen (string);
+
+
+2) strcpy: string copy -> manipula apenas 2 string(2parametro)
+-> copia o conteúdo de uma string para outra
+
+suponha as seguintes strings: str1 e str2
+
+str1 = str2;   NÃO!!!! //problema com string por ser vetor armazena endereço da primeira posicao
+
+
+strcpy (str1, str2);   SIM!!!!
+
+
+3) strcat: string concat
+-> concatena/junta duas strings (e o resultado é armazenado na primeira string)
+suponha as seguintes strings com os seguintes conteúdos:
+
+str1: JOAO
+str2: SILVA
+
+strcat (str1, str2);
+
+str1: JOAOSILVA
+str2: SILVA
+suponha as seguintes strings com os seguintes conteúdos:
+
+str1: ABCDE
+str2: XYZ
+str3: IOP
+
+strcat (str1, str2);
+
+Novos valores das strings após a execução do comando anterior
+str1: ABCDEXYZ
+str2: XYZ
+str3: IOP
+
+strcat (str1, str3);
+
+Novos valores das strings após a execução do comando anterior
+str1: ABCDEXYZIOP
+str2: XYZ
+str3: IOP
+
+4) strcmp: string compare
+-> compara os conteúdos de duas strings (retornando um número inteiro)
+
+	se retornar 0, as duas strings são exatamente iguais
+
+
+
+Atenção:
+
+	if (str1 == str2)	NÃO!!!! (pois estaria comparando endereços de memória)
+
+	if (strcmp(str1,str2) == 0)	SIM!!!! mesmo caso
