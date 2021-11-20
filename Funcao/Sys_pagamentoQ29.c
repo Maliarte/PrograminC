@@ -1,7 +1,4 @@
 /* 
-Nome: Marilia Silva Cardoso dos Santos 
-Atividade para nota AV1
-
 
 Uma lanchonete aceita 4 formas de pagamento: cartão de crédito, cartão de débito, dinheiro e ticket refeição. Faça um programa em C para exibir o valor a ser devolvido (troco) aos clientes ou a mensagem “Não há troco”. Para cada cliente, o seu programa deverá ler o valor da despesa a ser paga (real) pelo cliente e o tipo de pagamento (inteiro): 1 para cartão de débito, 2 para cartão de crédito, 3 para dinheiro ou 4 para ticket. Se o pagamento for realizado por cartão (débito ou crédito), não há troco. Para os demais tipos de pagamento, pode ou não haver troco. Se for pagamento em dinheiro, será lido, também, o valor pago. Se o pagamento for com tickets, devem ser lidos a quantidade de tickets e o valor de cada ticket (repare que os valores podem ser diferentes). Término da leitura dos clientes: valor da despesa = 0.
 
