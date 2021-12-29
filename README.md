@@ -4,7 +4,7 @@
 
 # PrograminC
 
-* [Operadores](https://github.com/Maliarte/PrograminC/blob/master/Operadores)
+* [Operadores](https://github.com/Maliarte/PrograminC/blob/master/Operadores.md)
 * [Condicionais](https://github.com/Maliarte/PrograminC/tree/master/TDD)
 * [Laços de Repetição](https://github.com/Maliarte/PrograminC/tree/master/Repeti%C3%A7ao)
 * [Repetição Determinada](https://github.com/Maliarte/PrograminC/tree/master/Repeti%C3%A7ao/RepeticaoDeterminada)
