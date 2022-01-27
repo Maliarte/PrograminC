@@ -1,5 +1,6 @@
 ## E aí Tupis Techies, retorno como uma função do tipo 'inteiro', ou quase isso.
-Como diria Fer Roar, do jogo tope Plantas e Zumbis (que você pode assistir no canal MEID no Ytube https://www.youtube.com/watch?v=c8mt1sYiSas).
+"Você quer voar nas aventuras do Perigo?"
+Como diria Fer Roar, do jogo tope Plantas e Zumbis (que você pode assistir no canal MEID no Ytube Meet Fer Roar 13:55 https://www.youtube.com/watch?v=c8mt1sYiSas).
 
 ![](https://github.com/Maliarte/images/blob/master/domine-conceito-lista-dinamica-com-maliarte.jpg)
 Estamos familiarizados com estrutura de dados homogênias, como vetores e matrizes, que conseguimos manipular com uma simples declaração de tipos e o tamanho, ou 'quant', 
