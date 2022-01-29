@@ -3,6 +3,7 @@
 Como diria Fer Roar, do jogo tope Plantas e Zumbis (que você pode assistir no canal MEID no Ytube Meet Fer Roar 13:55 https://www.youtube.com/watch?v=c8mt1sYiSas).
 
 ![](https://github.com/Maliarte/images/blob/master/domine-conceito-lista-dinamica-com-maliarte.jpg)
+###### Tabela realizada na Disciplina de Fundamentos da Programação - Prof. Leonardo Vianna.
 Estamos familiarizados com estrutura de dados homogênias, como vetores e matrizes, que conseguimos manipular com uma simples declaração de tipos e o tamanho, ou 'quant', 
 no cabeçalho do programa. Essa manipulação é do tipo estática, portanto, a alocação de mmemória  precede a execução do programa.
 Para tal allocamos um espaço 'x' de memória do nosso computador, que deverá ou não ser totalmente ocupado.
