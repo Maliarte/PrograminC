@@ -13,6 +13,7 @@
 * [Vetores](https://github.com/Maliarte/PrograminC/tree/master/Vetores)
 * [Misto](https://github.com/Maliarte/PrograminC/tree/master/Funcoes_Vetores)
 * [Ponteiros](https://github.com/Maliarte/PrograminC/tree/master/Ponteiros)
+* [Memória](https://github.com/Maliarte/PrograminC/tree/master/memory)
 * [Matrizes](https://github.com/Maliarte/PrograminC/tree/master/Matrizes)
 * [Strings](https://github.com/Maliarte/PrograminC/tree/master/Strings)
 * [Listas](https://github.com/Maliarte/PrograminC/tree/master/Listas)
