@@ -18,6 +18,7 @@
 * [Strings](https://github.com/Maliarte/PrograminC/tree/master/Strings)
 * [Listas](https://github.com/Maliarte/PrograminC/tree/master/Listas)
 * [Structs](https://github.com/Maliarte/PrograminC/tree/master/Struct)
+* [Arquivos](https://github.com/Maliarte/PrograminC/tree/master/Arch)
 * [Referencias](http://files.dtsilva.webnode.pt/200000087-adb28aeac7/Sebenta_C.pdf)
 ## 
 
