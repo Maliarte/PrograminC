@@ -1,0 +1,103 @@
+/*
+	FAETERJ-Rio
+	FPR - Manhã - Professor Leonardo Vianna
+	Data: 25/11/2021
+	
+	Structs
+	
+	Lista de Exercícios VIII
+
+	Questão 04:                                         ai sim é struct
+	Suponha a existência de um vetor de tamanho TAM, cada posição armazenando o nome da 
+	pessoa e a sua data de aniversário (representada por um struct do tipo TData, 
+	contendo os campos dia e mes). Pede-se o desenvolvimento das seguintes funções:
+ 	
+	- Determinar a quantidade de pessoas que fazem aniversário no mês M;
+ 	- Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, 
+	  ambas do tipo Tdata.	
+
+
+      Importante na chamada da função é a ordem e o tipo
+
+*/
+
+//importação de bibliotecas
+#include <stdio.h>
+
+//declaração de constantes
+#define TAM 5
+
+//definição de tipos
+typedef struct {		//representando a data de aniversário, com os campos dias e mês
+	int dia, mes;
+} TData;
+
+typedef struct {		//representando cada pessoa, com os campos nome e data de aniversário
+	char nome[30];
+	TData aniversario;
+} TPessoa;
+
+//protótipos das funções
+int aniversariantesDoMes (TPessoa vetor[], int quant, int mes);
+void exibirAniversariantes (TPessoa vetor[], int quant, TData d1, TData d2);
+
+//main
+void main ()
+{
+	//declaração de variáveis
+	TPessoa p[TAM];
+}
+
+//implementação das funções
+
+//Determinar a quantidade de pessoas que fazem aniversário no mês M
+int aniversariantesDoMes (TPessoa vetor[], int quant, int mes)
+{
+	//declaração de variáveis
+	int i, cont = 0;
+	
+	//percorrendo o vetor
+	for (i=0;i<quant;i++)
+	{
+		//verificando se a pessoa da posição 'i' faz aniversário no mês 'mes', passado por parâmetro
+		if (vetor[i].aniversario.mes == mes)
+		{
+			cont++;
+		}
+	}
+	
+	//retornando o resultado
+	return cont;
+}
+
+//Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, 
+//ambas do tipo Tdata.	
+void exibirAniversariantes (TPessoa vetor[], int quant, TData d1, TData d2)
+{
+	/*exemplo:
+		dividir o problema em partes, 
+            1)comparar os meses
+			d1: 10/06
+			d2: 01/10
+
+            2)e se for 20/10?
+            comparar os dias.
+
+
+            termo geral abstração
+	*/		
+			
+}
+
+// quero saber se ' data' esta no intervalo de 'data1'e 'data2'
+int verificaIntervaloDatas (TData data1, TData data2, TData data)
+{
+	if((p[i].mes < data1) && (p[i].mes > data2))
+     //{fora do intervalo}
+     else{ //esta dentro do intervalo
+
+         //comparar  dias
+         if((p[i].dia < data1) && (p[i].mes > data2))
+     }
+    
+}

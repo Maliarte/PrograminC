@@ -1,0 +1,30 @@
+/* 
+
+    int funcao02 (TLista L1, TLista L2) {
+    
+    TLista aux = L1;
+    
+    int C = 0;
+    
+    while (aux != NULL) {
+ 
+    if (funcao01 (L2, aux->valor) > 0) {
+    
+    C++;
+    
+    }
+    
+    aux = aux->prox;
+    }
+    
+    return C;
+}
+
+Leonardo Vianna | 08:50
+
+    função1: determina (e retorna) quantos múltiplos de A existem na lista L
+    
+    função2: determina (e retorna) quantos elementos de L1 possuem múltiplos em L2
+
+
+*/
