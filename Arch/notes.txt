@@ -1,0 +1,9 @@
+lista vii ex 4 linha 60
+
+else { se estas aqui é pq abriu o arquivo entao e importante fechalo}
+
+
+
+ex 4
+
+procurar o maior de todos ate que seja inferior ao ultimo

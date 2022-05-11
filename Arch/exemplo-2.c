@@ -13,11 +13,10 @@
 
 //declaração dos protótipos das funções
 int criarArquivo (char nomeArq[], int N);
-/* Ao desenvolver uma função que manipule arquivos, opte por passar o NOME DO ARQUIVO (string) 
-*  e não uma variável FILE*. Dentro da função, você deverá criar a variável FILE*, associá-la 
-*  ao nome do arquivo ('fopen'), manipule  o arquivo e feche-o ao final. Ou seja, todo o processo 
-*  - desde a declaração da variável FILE* até o fechamento 
-*  do arquivo - deve ser realizado dentro da função.
+/*Ao desenvolver uma função que manipule arquivos, opte por passar o NOME DO ARQUIVO (string) - e não uma variável
+  FILE*. Dentro da função, você deverá criar a variável FILE*, associá-la ao nome do arquivo ('fopen'), manipule 
+  o arquivo e feche-o ao final. Ou seja, todo o processo - desde a declaração da variável FILE* até o fechamento 
+  do arquivo - deve ser realizado dentro da função.
 */
 
 //main

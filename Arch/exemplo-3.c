@@ -4,8 +4,8 @@
 	
 	ARQUIVOS
 	
-	Exemplo 3: lendo os elementos de um arquivo, 
-	sabendo que os números estão dispostos um por linha.
+	Exemplo 3: lendo os elementos de um arquivo, sabendo que os números estão dispostos
+	um por linha.
 */
 
 //importação de bibliotecas
