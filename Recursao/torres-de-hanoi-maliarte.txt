@@ -1,0 +1,21 @@
+					
+						Hanoi (0, 'A', 'B', 'C')	n=0 => caso base => nada é feito	
+				Hanoi (1, 'A', 'C', 'B')		printf  'A' -> 'C'	1º movimento	
+				n=1; O='A'; D='C'; aux='B'		Hanoi (0, 'B', 'C', 'A')	n=0 => caso base => nada é feito	
+								
+								
+						Hanoi (0, 'C', 'A', 'B')	n=0 => caso base => nada é feito	
+				Hanoi (1, 'C', 'B', 'A')		printf  'C' -> 'B'	3º movimento	
+				n=1; O='C'; D='B'; aux='A'		Hanoi (0, 'A', 'B', 'C')	n=0 => caso base => nada é feito	
+Hanoi (3, 'A', 'C', 'B')								
+n=3; O='A'; D='C'; aux = 'B'		printf  'A' -> 'C'	4º movimento					
+						Hanoi (0, 'B', 'C', 'A')	n=0 => caso base => nada é feito	
+				Hanoi (1, 'B', 'A', 'C')		printf  'B' -> 'A'	5º movimento	
+				n=1; O='B'; D='A'; aux='C'		Hanoi (0, 'C', 'A', 'B')	n=0 => caso base => nada é feito	
+								
+		Hanoi (2, 'B', 'C', 'A')		printf  'B' -> 'C'	6º movimento			
+		n=2; O='B'; D='C'; aux='A'						
+						Hanoi (0, 'A', 'B', 'C')	n=0 => caso base => nada é feito	
+				Hanoi (1, 'A', 'C', 'B')		printf  'A' -> 'C'	7º movimento	
+				n=1; O='A'; D='C'; aux='B'		Hanoi (0, 'B', 'C', 'A')	n=0 => caso base => nada é feito	
+
